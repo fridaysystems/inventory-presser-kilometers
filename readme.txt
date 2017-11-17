@@ -25,6 +25,7 @@ The quickest method for installing this plugin is:
 = 1.1.0 =
 
 * [Added] Support for [Lift Kit](https://github.com/fridaysystems/lift-kit)-based themes
+* [Added] This readme file
 
 = 1.0.0 =
 
