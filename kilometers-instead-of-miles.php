@@ -3,7 +3,7 @@
  * Plugin Name: Kilometers Instead of Miles
  * Plugin URI: https://inventorypresser.com/
  * Description: Uses kilometers as the units for vehicle odometer values in themes designed for Inventory Presser
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Corey Salzano
  * Author URI: https://profiles.wordpress.org/salzano
  * Text Domain: inventory-presser-kilometers

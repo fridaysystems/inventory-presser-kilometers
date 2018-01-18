@@ -3,7 +3,7 @@ Contributors: salzano
 Tags: odometer, miles, kilometers
 Requires at least: 3.0
 Tested up to: 4.9
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ The quickest method for installing this plugin is:
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.2.0 =
+* [Added] This plugin is now translation-ready
 
 = 1.1.0 =
 
