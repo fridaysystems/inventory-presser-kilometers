@@ -20,8 +20,8 @@ class Kilometers_Instead_of_Miles {
 			load_plugin_textdomain( 'inventory-presser-kilometers', false, __DIR__ );
 		} );
 
-		add_filter( 'invp_odometer_word', array( &$this, 'replace_miles_with_kilometers' ) );
-		add_filter( '_dealer_odometer_word', array( &$this, 'replace_miles_with_kilometers' ) );
+		add_filter( 'invp_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
+		add_filter( '_dealer_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
 	}
 
 	function replace_miles_with_kilometers( $word ) {
