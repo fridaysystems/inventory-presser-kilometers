@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Inventory Presser Kilometers Instead of Miles
- * Plugin URI: https://github.com/fridaysystems/kilometers-instead-of-miles
+ * Plugin URI: https://github.com/fridaysystems/inventory-presser-kilometers
  * Description: Add-on for Inventory Presser. Changes odometer units to kilometers.
  * Version: 1.2.0
  * Author: Corey Salzano

@@ -1,4 +1,4 @@
-=== Kilometers Instead of Miles  ===
+=== Inventory Presser Kilometers Instead of Miles  ===
 Contributors: salzano
 Tags: odometer, miles, kilometers
 Requires at least: 3.0
