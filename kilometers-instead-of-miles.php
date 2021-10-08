@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Kilometers Instead of Miles
- * Plugin URI: https://inventorypresser.com/
- * Description: Uses kilometers as the units for vehicle odometer values in themes designed for Inventory Presser
+ * Plugin Name: Inventory Presser Kilometers Instead of Miles
+ * Plugin URI: https://github.com/fridaysystems/kilometers-instead-of-miles
+ * Description: Add-on for Inventory Presser. Changes odometer units to kilometers.
  * Version: 1.2.0
  * Author: Corey Salzano
  * Author URI: https://profiles.wordpress.org/salzano
@@ -20,7 +20,9 @@ class Kilometers_Instead_of_Miles {
 			load_plugin_textdomain( 'inventory-presser-kilometers', false, __DIR__ );
 		} );
 
+		//For units in the core plugin
 		add_filter( 'invp_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
+		//For units in the _dealer theme
 		add_filter( '_dealer_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
 	}
 

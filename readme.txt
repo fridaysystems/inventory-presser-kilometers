@@ -7,7 +7,7 @@ Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Uses kilometers as the units for vehicle odometer values in themes designed for Inventory Presser
+Add-on for Inventory Presser. Changes odometer units to kilometers. Does not convert or affect the odometer value.
 
 == Description ==
 
