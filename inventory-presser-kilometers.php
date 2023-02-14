@@ -39,16 +39,28 @@ class Kilometers_Instead_of_Miles {
 		add_filter( '_dealer_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
 	}
 
-	function replace_miles_with_kilometers( $word ) {
-		switch( $word ) {
-			case 'Mileage':
-				return __( 'Kilometrage', 'inventory-presser-kilometers' );
-			case 'mileage':
-				return __( 'kilometrage', 'inventory-presser-kilometers' );
-			case 'Miles':
-				return __( 'Kilometers', 'inventory-presser-kilometers' );
-			case 'miles':
-				return __( 'kilometers', 'inventory-presser-kilometers' );
+	/**
+	 * replace_miles_with_kilometers
+	 *
+	 * @param  mixed $word
+	 * @return void
+	 */
+	public function replace_miles_with_kilometers( $word ) {
+		$middle_pieces = array(
+			'ileage' => 'ilometrage',
+			'ILEAGE' => 'ILOMETRAGE',
+			'iles'   => 'ilometers',
+			'ILES'   => 'ILOMETERS',
+			'i'      => 'm',
+			'I'      => 'M',
+		);
+		foreach ( array_keys( $middle_pieces ) as $middle_piece ) {
+			// If the last character is maybe ,:.
+			$pattern = "/([Mm])($middle_piece)([\.,:])?/";
+			if ( preg_match( $pattern, $word, $matches ) ) {
+				$k = 'M' === $matches[1] ? 'K' : 'k';
+				return $k . $middle_pieces[ $middle_piece ] . ( isset( $matches[3] ) ? $matches[3] : '' );
+			}
 		}
 		return $word;
 	}
