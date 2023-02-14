@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) || exit;
  * Plugin Name: Inventory Presser - Kilometers Instead of Miles
  * Plugin URI: https://inventorypresser.com/downloads/kilometers-instead-of-miles/
  * Description: Add-on for Inventory Presser. Changes odometer units to kilometers.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: Corey Salzano
  * Author URI: https://github.com/fridaysystems/inventory-presser-kilometers
  * Text Domain: inventory-presser-kilometers
