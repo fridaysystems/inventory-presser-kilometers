@@ -26,12 +26,7 @@ class Kilometers_Instead_Of_Miles {
 	 */
 	public function add_hooks() {
 		// Allow translations.
-		add_action(
-			'plugins_loaded',
-			function() {
-				load_plugin_textdomain( 'inventory-presser-kilometers', false, __DIR__ );
-			}
-		);
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 
 		// For units in the core plugin.
 		add_filter( 'invp_odometer_word', array( $this, 'replace_miles_with_kilometers' ) );
@@ -43,6 +38,16 @@ class Kilometers_Instead_Of_Miles {
 	 * Loads translated strings.
 	 *
 	 * @return void
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'inventory-presser-kilometers', false, __DIR__ . '/languages' );
+	}
+
+	/**
+	 * Replaces strings like mileage and miles to odometer and kilometers.
+	 *
+	 * @param  string $word The odometer word to be converted.
+	 * @return string
 	 */
 	public function replace_miles_with_kilometers( $word ) {
 		$middle_pieces = array(
