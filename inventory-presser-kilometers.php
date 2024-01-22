@@ -15,9 +15,9 @@ defined( 'ABSPATH' ) || exit;
  */
 
 /**
- * Kilometers_Instead_of_Miles
+ * Kilometers_Instead_Of_Miles
  */
-class Kilometers_Instead_of_Miles {
+class Kilometers_Instead_Of_Miles {
 
 	/**
 	 * hooks
@@ -65,5 +65,5 @@ class Kilometers_Instead_of_Miles {
 		return $word;
 	}
 }
-$kilometers2384907234 = new Kilometers_Instead_of_Miles();
-$kilometers2384907234->add_hooks();
+$invp_kilometers_9000 = new Kilometers_Instead_Of_Miles();
+$invp_kilometers_9000->add_hooks();
