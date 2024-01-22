@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 class Kilometers_Instead_Of_Miles {
 
 	/**
-	 * hooks
+	 * Adds hooks that power the plugin features.
 	 *
 	 * @return void
 	 */
@@ -40,9 +40,8 @@ class Kilometers_Instead_Of_Miles {
 	}
 
 	/**
-	 * replace_miles_with_kilometers
+	 * Loads translated strings.
 	 *
-	 * @param  mixed $word
 	 * @return void
 	 */
 	public function replace_miles_with_kilometers( $word ) {
