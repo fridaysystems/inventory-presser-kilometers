@@ -50,20 +50,20 @@ class Kilometers_Instead_Of_Miles {
 	 * @return string
 	 */
 	public function replace_miles_with_kilometers( $word ) {
-		$middle_pieces = array(
-			'ileage' => 'ilometrage',
-			'ILEAGE' => 'ILOMETRAGE',
-			'iles'   => 'ilometers',
-			'ILES'   => 'ILOMETERS',
-			'i'      => 'm',
-			'I'      => 'M',
+		$replacements = array(
+			'Mileage' => __( 'Odometer', 'inventory-presser-kilometers' ),
+			'Miles'   => __( 'Kilometers', 'inventory-presser-kilometers' ),
+			'Mi'      => __( 'Km', 'inventory-presser-kilometers' ),
 		);
-		foreach ( array_keys( $middle_pieces ) as $middle_piece ) {
-			// If the last character is maybe ,:.
-			$pattern = "/([Mm])($middle_piece)([\.,:])?/";
-			if ( preg_match( $pattern, $word, $matches ) ) {
-				$k = 'M' === $matches[1] ? 'K' : 'k';
-				return $k . $middle_pieces[ $middle_piece ] . ( isset( $matches[3] ) ? $matches[3] : '' );
+		foreach ( array_keys( $replacements ) as $match ) {
+			if ( $word === $match ) {
+				return $replacements[ $match ];
+			}
+			if ( strtolower( $word ) === strtolower( $match ) ) {
+				return strtolower( $replacements[ $match ] );
+			}
+			if ( strtoupper( $word ) === strtoupper( $match ) ) {
+				return strtoupper( $replacements[ $match ] );
 			}
 		}
 		return $word;
